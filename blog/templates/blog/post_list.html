@@ -6,17 +6,12 @@
 		<div>
 			<h1><a href="">Wango's VSCO Blog</a></h1>
 		</div>
-
+	{% for post in posts %}
 		<div>
-			<p>published: 10.03.2020, 11:47</p>
-			<h2><a href="">My first post!!</a></h2>
-			<p>This is my first post</p>
+			<p>published: {{post.published_date}} </p>
+			<h1><a href="">{{post.title}}</a></h1>
+			<p>{{post.text|linebreaksbr}}</p>
 		</div>
-
-		<div>
-			<p>published: 10.03.2020, 12:01</p>
-			<h2><a href="">My second post!!!</a></h2>
-			<p>this is my second one!!</p>
-		</div>
+	{% endfor %}
 	</body>
 </html>
